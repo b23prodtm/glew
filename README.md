@@ -67,8 +67,14 @@ RedHat/CentOS/Fedora: `$ sudo yum install libXmu-devel libXi-devel libGL-devel c
 
 ##### Build
 
-	$ cd build
-	$ cmake ./cmake 
+To build GLEW and cmake use Homebrew,
+	
+	$ brew install cmake
+
+Once finished, set variables to configure a build of the GLEW framework and build the source code
+
+        $ cd build
+	$ cmake -D BUILD_FRAMEWORK=TRUE -D CMAKE_INSTALL_PREFIX=/Library/Frameworks ./cmake
 	$ make -j4
 
 | Target     | Description |
