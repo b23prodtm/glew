@@ -33,7 +33,7 @@ It is highly recommended to build from a tgz or zip release snapshot.
 The code generation workflow is a complex brew of gnu make, perl and python, that works best on Linux or Mac.
 For most end-users of GLEW the official releases are the best choice, with first class support.
 
-### Linux and Mac
+### Linux
 
 #### Using GNU Make
 
@@ -55,6 +55,8 @@ Variables:  `SYSTEM=linux-clang, GLEW_DEST=/usr/local, STRIP=`
 
 _Note: may need to make **auto** folder_
 
+### Mac OS X
+
 #### Using cmake
 
 *CMake 2.8.12 or higher is required.*
@@ -73,9 +75,9 @@ To build GLEW and cmake use Homebrew,
 
 Once finished, set variables to configure a build of the GLEW framework and build the source code
 
-        $ cd build
+	$ cd build
 	$ cmake -D BUILD_FRAMEWORK=TRUE -D CMAKE_INSTALL_PREFIX=/Library/Frameworks ./cmake
-	$ make -j4
+	$ sudo make -j4 install
 
 | Target     | Description |
 | ---------- | ----------- |
